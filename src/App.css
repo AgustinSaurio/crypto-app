@@ -1,38 +1,141 @@
+body {
+  background-color: #35363a;
+  color: rgb(255, 255, 255);  
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cabin', sans-serif;
+}
+.title {
+  font-size: 50px;
+  background-color: #101012;
+  padding: 15px;
+}
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container-app {
+  background-color: #202124;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.crypto-list {
+  display: flex;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+table {
+  width: 100%;
+}
+.symbol {
+  color: #a9adb8;
+}
+tr > th {
+  text-align: center;
+  background-color: #101012;
+  height: 30px;
+}
+td, th {
+  height: 70px;
+  text-align: left;
+  border-bottom: 1px solid grey;
+}
+td > img {
+  text-align: center;
+}
+.table-number {
+  text-align: center;
+}
+.coin-descent {
+  color: red;
+}
+.coin-rise {
+  color: rgb(35, 201, 35);
+}
+input {
+  color: #202124;
+  height: 40px;
+  width: 250px;
+  margin: 20px 0;
+  background-color: transparent;
+  color: rgb(241, 241, 241);
+  font-size: 20px;
+  text-align: center;
+  border: none;
+  border-bottom: 2px solid white;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  background-color: #101012;
+}
+.container-left {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10px;
+}
+.info-crypto {
+  text-align: left;
+}
+.container-left > img {
+  width: 20%;
+  min-width: 150px;
+  margin: 20px 0;
+}
+.container-right {
+  flex: 2;
+  display: flex;
+  align-items: center;
+}
+.days {
+  display: flex;
+  justify-content: space-between;
+}
+.days > span {
+  width: 14.20%;
+  border: 1px solid #35363a;
+}
+span > span {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.info-crypto > span {
+  color: #a9adb8;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.graphic {
+ flex: auto;
+}
+.percentage {
+  width: 100px;
+}
+@media (max-width: 500px) {
+  * {
+    font-size: 1em;
   }
-  to {
-    transform: rotate(360deg);
+  .container-left > img {
+    min-width: 100px;
+  }
+  td {
+    font-size: 14px;
+  }
+  .table-percentage {
+    text-align: right;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .container-left {
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #101012;
+  }
+  .container-right {
+    margin: 0 0;
+    display: block;
+  }
+  .percentage {
+    display: flex;
+    justify-content: space-around;
+    height: 30px;
+    align-items: center;
+    width: auto;
   }
 }
